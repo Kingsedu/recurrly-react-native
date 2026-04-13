@@ -1,7 +1,25 @@
 import "../global.css";
-
-import { Stack, Slot } from "expo-router";
+import { useEffect } from 'react'
+import { Stack, Slot} from "expo-router";
+import * as SplashScreen from "expo-splash-screen";
+import { useFonts } from "expo-font"
+SplashScreen.preventAutoHideAsync()
 
 export default function RootLayout() {
-  return <Slot />;
+  const [fontsLoaded] = useFonts({
+    'sans-regular': require("../assets/fonts/PlusJakartaSans-Regular.ttf"),
+    'sans-bold': require("../assets/fonts/PlusJakartaSans-Bold.ttf"),
+    'sans-medium': require("../assets/fonts/PlusJakartaSans-Medium.ttf"),
+    'sans-semibold': require("../assets/fonts/PlusJakartaSans-SemiBold.ttf"),
+    'sans-extrabold': require("../assets/fonts/PlusJakartaSans-ExtraBold.ttf"),
+    'sans-light': require("../assets/fonts/PlusJakartaSans-Light.ttf")
+  })
+  useEffect(()=> {
+    if(fontsLoaded){
+      console.log('fonts loaded successfully')
+      SplashScreen.hideAsync()
+    }
+  }, [fontsLoaded])
+  if(!fontsLoaded) return null
+  return <Stack  screenOptions={{ headerShown: false}}/>;
 }

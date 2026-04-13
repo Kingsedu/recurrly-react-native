@@ -17,6 +17,10 @@ module.exports = {
       fontFamily:{
         'sans-regular': ['sans-regular'],
         'sans-bold': ['sans-bold'],
+        'sans-medium': ['sans-medium'],
+        'sans-semibold': ['sans-semibold'],
+        'sans-extrabold': ['sans-extrabold'],
+        'sans-light': ['sans-light'],
       }
     },
   },

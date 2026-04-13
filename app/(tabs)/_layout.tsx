@@ -13,7 +13,7 @@ export default function TabsRootLayout() {
     console.log(`this is the Top Value ${insets.top} and this is the bottom value ${insets.bottom}`)
     console.log(`this is the horizontal value ${tabBar.horizontalInset} `)
     const TabIcon = ({focused, icon}: TabIconProps) => {
-        const bg = focused ? 'bg-accent' : ''
+        const bg = focused ? 'bg-[#ea7a53]' : ''
         return (
            <View className='size-12 items-center justify-center'>
             <View className={`size-12 items-center justify-center rounded-full bg-transparent ${bg}`}>

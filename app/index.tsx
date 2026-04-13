@@ -1,0 +1,19 @@
+import { Text, View } from "react-native";
+import { Link } from 'expo-router'
+export default function Index() {
+  return (
+    <View className="flex-1 items-center justify-center bg-background">
+      <Text className="text-xl font-sans-bold text-success">
+        Welcome to React-native.
+      </Text>
+      <Link href="/onboarding" className="mt-4 rounded text-white px-10 py-3 inline-flex bg-black ">On Boarding Screen</Link>
+      <Link
+        href="/signUp"
+        className="mt-4 inline-flex rounded bg-black px-10 py-3 text-white"
+      >
+        Sign Up
+      </Link>
+
+    </View>
+  );
+}

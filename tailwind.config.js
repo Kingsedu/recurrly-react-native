@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
+  content: ["./app/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+    "./constants/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
   theme: {
     extend: {
@@ -13,6 +15,7 @@ module.exports = {
         accent: "#ea7a53",
         success: "#16a34a",
         destructive: "#dc2626",
+        subscription: "#8fd1bd;"
       },
       fontFamily:{
         'sans-regular': ['sans-regular'],
